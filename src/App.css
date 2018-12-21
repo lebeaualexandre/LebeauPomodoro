@@ -1,0 +1,193 @@
+/* ----- GENERAL ----- */
+.disabled {
+  display: none;
+}
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  font-weight: 800;
+}
+
+
+/* ----- SECTIONS ----- */
+html {
+  background-color: #cebea5;
+}
+
+#root {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+br {
+  line-height: 5px;
+}
+
+.Clock {
+  text-align: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #c15555;
+}
+
+.controles {
+  position: absolute;
+  bottom: -15px;
+  width: 200px;
+  z-index: 50;
+}
+
+
+/* ----- TEXTES ----- */
+.time {
+  position: relative;
+  top: 80px;
+}
+
+i {
+  display: block;
+}
+
+
+/* ----- INPUTS ----- */
+.activity {
+  background: none;
+  border: none;
+  color: #ffffff;
+  text-align: left;
+  resize: none;
+  display: inline-block; !important
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  width: 250px;
+  z-index: 50;
+  font-size: 1em;
+}
+
+.activity::placeholder {
+  color: #DDD;
+}
+
+.Button {
+  background-color: #c15555;
+  border: none;
+  border-radius: 50%;
+  align-content: center;
+  height: 50px;
+  width: 50px;
+  box-shadow: 2px 2px 20px -5px rgba(0,0,0,0.75);
+}
+
+.Button:active {
+  outline: none;
+  border: none;
+}
+
+.minusplus {
+  height: 32px;
+  width: 32px;
+}
+
+.minusplus:disabled {
+  background-color: #dd6c6c;
+}
+
+.play-pause {
+  padding: 10px;
+}
+
+
+/* ----- LISTES ----- */
+ul {
+  position: relative;
+  top: 200px;
+  list-style-type: none;
+}
+
+li {
+  text-align: left;
+  display: block;
+}
+
+
+/* ----- DESSINS ----- */
+.chart {
+  position: absolute;
+  margin: 0;
+  height: 220px;
+  width: 220px;
+  left: -10px;
+  top: -10px;
+  z-index: 1;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #FFF;
+  stroke-width: 10;
+  transition: stroke-dashoffset 0.1s;
+  -webkit-animation-play-state: running;
+}
+
+
+/* ----- ANIMATIONS ----- */
+.sonne {
+  animation: FlashesColor infinite 0.5s linear alternate;
+}
+
+.hold {
+  animation: Flashes infinite 0.5s linear alternate;
+}
+
+.fa-redo:hover {
+  animation: Spin infinite 20s linear;
+}
+
+@keyframes Spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes FlashesColor {
+  from {
+    background-color: #c15555;
+  }
+  to {
+    background-color: #a04545;
+  }
+}
+
+@keyframes Flashes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
