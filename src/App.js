@@ -164,10 +164,6 @@ class Tasks extends Component {
 }
 
 class DetailsNumeriques extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   doubleDigits(n) {
     return n < 10 ? '0' + n : n;
   }
